@@ -48,7 +48,7 @@
 
 <body>
 <audio autoplay loop>
-  <source src="assets/music/demo.mp3" type="audio/mpeg">
+  <source id="player" src="assets/music/demo.mp3" type="audio/mpeg">
 </audio>
 <!-- ======= Mobile nav toggle button ======= -->
 <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
@@ -67,7 +67,7 @@
                   width: auto;
                   height: auto;"
       >
-      <h1 class="text-light"><a href="index.html">Lê Hùng Vương</a></h1>
+      <h1 class="text-light"><a href="index.html" style="text-align: center">Lê Hùng Vương</a></h1>
       <div class="social-links mt-3 text-center">
         <a class="facebook"
            href="https://www.facebook.com/vuongDTTN/"><i class="bx bxl-facebook"></i></a>
@@ -768,8 +768,6 @@
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                 Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
-                fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem
-                dolore labore illum veniam.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
               <img alt=""
@@ -787,8 +785,6 @@
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
                 Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
-                veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
-                culpa fore nisi cillum quid.
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
               <img alt=""
@@ -909,6 +905,13 @@
    href="#"><i class="bi bi-arrow-up-short"></i></a>
 
 <!-- Vendor JS Files -->
+<script>
+  document.addEventListener('click', musicPlay);
+  function musicPlay() {
+    document.getElementById('player').play();
+    document.removeEventListener('click', musicPlay);
+  }
+</script>
 <script src="assets/vendor/aos/aos.js"></script>
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
