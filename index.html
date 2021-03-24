@@ -47,8 +47,11 @@
 </head>
 
 <body>
-<audio autoplay loop>
-  <source id="player" src="assets/music/demo.mp3" type="audio/mpeg">
+<audio autoplay
+       id="player"
+       loop>
+  <source src="assets/music/demo.mp3"
+          type="audio/mp3">
 </audio>
 <!-- ======= Mobile nav toggle button ======= -->
 <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
@@ -65,7 +68,10 @@
                   max-width:120px;
                   max-height:120px;
                   width: auto;
-                  height: auto;"
+                  height: auto;
+                   margin: 0 auto;
+                  text-align: center;
+                "
       >
       <h1 class="text-light"><a href="index.html" style="text-align: center">Lê Hùng Vương</a></h1>
       <div class="social-links mt-3 text-center">
@@ -90,8 +96,8 @@
                href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a>
         </li>
         <li><a class="nav-link scrollto"
-               href="#portfolio"><i class="bx bx-book-content"></i>
-          <span>Portfolio</span></a></li>
+               href="./assets/love/index1.html"><i class="bx bx-book-content"></i>
+          <span>Love</span></a></li>
         <li><a class="nav-link scrollto"
                href="#services"><i class="bx bx-server"></i> <span>Services</span></a></li>
         <li><a class="nav-link scrollto"
@@ -137,6 +143,7 @@
                style="display: block;
                   max-width:327px;
                   max-height:327px;
+                   margin: 0 auto;
                   width: auto;
                   height: auto;"
           >
@@ -702,8 +709,6 @@
 
       <div class="section-title">
         <h2>Những Câu Nói Yêu Thích</h2>
-        <p>Những Câu Nói Hay Truyền Động Lực
-        </p>
       </div>
 
       <div class="testimonials-slider swiper-container"
@@ -739,8 +744,7 @@
               <img alt=""
                    class="testimonial-img"
                    src="assets/img/testimonials/testimonials-2.jpg">
-              <h3>Sara Wilsson</h3>
-              <h4>Designer</h4>
+              <h3>Khuyết Danh</h3>
             </div>
           </div><!-- End testimonial item -->
 
@@ -756,8 +760,7 @@
               <img alt=""
                    class="testimonial-img"
                    src="assets/img/testimonials/testimonials-3.jpg">
-              <h3>Jena Karlis</h3>
-              <h4>Store Owner</h4>
+              <h3>Khuyết Danh</h3>
             </div>
           </div><!-- End testimonial item -->
 
@@ -767,14 +770,13 @@
                  data-aos-delay="300">
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
+                Khi Người Học Trò Sẵn Sàng Thì Người Thầy Sẽ Xuất Hiện
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
               <img alt=""
                    class="testimonial-img"
                    src="assets/img/testimonials/testimonials-4.jpg">
-              <h3>Matt Brandon</h3>
-              <h4>Freelancer</h4>
+              <h3>Khuyết Danh</h3>
             </div>
           </div><!-- End testimonial item -->
 
@@ -784,14 +786,13 @@
                  data-aos-delay="400">
               <p>
                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
+                Gió Tầng Nào Thì Mây Tầng Đó
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
               <img alt=""
                    class="testimonial-img"
                    src="assets/img/testimonials/testimonials-5.jpg">
-              <h3>John Larson</h3>
-              <h4>Entrepreneur</h4>
+              <h3>Khuyết Danh</h3>
             </div>
           </div><!-- End testimonial item -->
 
@@ -887,7 +888,7 @@
               <div class="sent-message">Your message has been sent. Thank you!</div>
             </div>
             <div class="text-center">
-              <button type="submit">Send Message</button>
+              <button type="submit" onclick="thank()">Send Message</button>
             </div>
           </form>
         </div>
@@ -910,6 +911,9 @@
   function musicPlay() {
     document.getElementById('player').play();
     document.removeEventListener('click', musicPlay);
+  };
+  function thank(){
+    alert('xin cảm ơn bạn');
   }
 </script>
 <script src="assets/vendor/aos/aos.js"></script>
