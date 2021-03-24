@@ -113,14 +113,6 @@
     <div id="divResult3"></div>
     <a class="close-reveal-modal">&#215;</a>
 </div>
-<script language="javascript">
-    $(document).ready(function () {
-        $('#msb-nt').click(function () {
-            $('.music').slideToggle("fast");
-            $('#bg').css('display', 'none');
-        });
-    });
-</script>
 <div id="dialog-overlay"></div>
 <div id="dialog-box">
     <div class="dialog-content">
@@ -131,12 +123,13 @@
     </div>
 </div>
 
-<div class="msg">
+<div class="msg"
+     style="text-align: center; margin: 0 auto;">
 
-    <h1>YÊU ANH KHÔNG ?</h1>
+    <h1 style="text-align: center; margin: 0 auto;">YÊU ANH KHÔNG ?</h1>
 
-    <h2>TẮT CÁI NÀY ĐI MÀ KHÔNG TRẢ LỜI SẼ </br>
-        PHẢI YÊU ANH SUỐT ĐỜI ♥ =))
+    <h2 style="text-align: center; margin: 0 auto;">TẮT CÁI NÀY ĐI MÀ KHÔNG TRẢ LỜI SẼ </br>
+                                                    PHẢI YÊU ANH SUỐT ĐỜI ♥ =))
     </h2>
 
 
@@ -161,6 +154,12 @@
     $(document).ready(function () {
         $(document).bind("contextmenu", function (e) {
             return false;
+        });
+        $(document).ready(function () {
+            $('#msb-nt').click(function () {
+                $('.music').slideToggle("fast");
+                $('#bg').css('display', 'none');
+            });
         });
     });
 </script>
