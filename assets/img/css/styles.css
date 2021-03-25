@@ -7,11 +7,6 @@
 }
 
 body {
-	display: block;
-	max-width:327px;
-	max-height:327px;
-	width: auto;
-	height: auto;
 background: url('bg.jpg');
 background-repeat: no-repeat;
 background-position: center;
