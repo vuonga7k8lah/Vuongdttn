@@ -46,13 +46,17 @@
   ======================================================== -->
 </head>
 
-<body>
+<body onload="musicPlay()">
 <audio autoplay
        id="player"
-       loop>
+       loop
+       muted
+       src="assets/music/demo.mp3"
+>
   <source src="assets/music/demo.mp3"
           type="audio/mp3">
 </audio>
+<!--<iframe src="assets/music/demo.mp3" allow="autoplay" id="audio" style="display: none"></iframe>-->
 <!-- ======= Mobile nav toggle button ======= -->
 <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
@@ -110,7 +114,9 @@
 
 <!-- ======= Hero Section ======= -->
 <section class="d-flex flex-column justify-content-center align-items-center"
-         id="hero">
+         id="hero"
+         onmouseover="musicPlay(this)" onmouseout="musicPlay(this)"
+>
   <div class="hero-container"
        data-aos="fade-in">
     <h1>Lê Hùng Vương </h1>
@@ -141,6 +147,8 @@
           <img alt=""
                class="img-fluid"
                src="assets/img/c.jpeg"
+               onmouseover="musicPlay()"
+               onmouseout="musicPlay()"
                style="display: block;
                   max-width:327px;
                   max-height:327px;
@@ -176,7 +184,7 @@
                   <span>training,reading</span>
                 </li>
                 <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
-                  <span>kalilinuxkma@gmail.com</span>
+                  <span>vuongdttn1998@gmail.com</span>
                 </li>
                 <li><i class="bi bi-chevron-right"></i> <strong>Dream:</strong>
                   <span>dev and master SW</span></li>
@@ -481,9 +489,9 @@
            data-aos-delay="100">
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <div class="portfolio-wrap">
+          <div class="portfolio-wrap" style="">
             <img alt=""
-                 style="width: 307px;height: 231px"
+                 style="width: 307px;height: 231px;display: block;margin-left: auto;margin-right: auto;"
                  class="img-fluid"
                  src="https://i.imgur.com/tYDg7sS.jpg">
             <div class="portfolio-links">
@@ -500,7 +508,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-web">
           <div class="portfolio-wrap">
             <img alt=""
-                 style="width: 307px;height: 231px"
+                 style="width: 307px;height: 231px;display: block;margin-left: auto;margin-right: auto;"
                  class="img-fluid"
                  src="https://i.imgur.com/LBHRVu8.jpg">
             <div class="portfolio-links">
@@ -517,7 +525,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <div class="portfolio-wrap">
             <img alt=""
-                 style="width: 307px;height: 231px"
+                 style="width: 307px;height: 231px;display: block;margin-left: auto;margin-right: auto;"
                  class="img-fluid"
                  src="https://i.imgur.com/YlovVyj.jpg">
             <div class="portfolio-links">
@@ -534,7 +542,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-card">
           <div class="portfolio-wrap">
             <img alt=""
-                 style="width: 307px;height: 231px;image-rendering: pixelated;object-fit: contain;"
+                 style="width: 307px;height: 231px;display: block;margin-left: auto;margin-right: auto;"
                  src="https://i.imgur.com/sl9qU2N.jpg">
             <div class="portfolio-links">
               <a class="portfolio-lightbox"
@@ -550,7 +558,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-web">
           <div class="portfolio-wrap">
             <img alt=""
-                 style="width: 307px;height: 231px"
+                 style="width: 307px;height: 231px;display: block;margin-left: auto;margin-right: auto;"
                  class="img-fluid"
                  src="https://i.imgur.com/duWqRdp.jpg">
             <div class="portfolio-links">
@@ -567,7 +575,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <div class="portfolio-wrap">
             <img alt=""
-                 style="width: 307px;height: 231px"
+                 style="width: 307px;height: 231px;display: block;margin-left: auto;margin-right: auto;"
                  class="img-fluid"
                  src="https://i.imgur.com/NkA2EzQ.jpg">
             <div class="portfolio-links">
@@ -584,7 +592,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-card">
           <div class="portfolio-wrap">
             <img alt=""
-                 style="width: 307px;height: 231px"
+                 style="width: 307px;height: 231px;display: block;margin-left: auto;margin-right: auto;"
                  class="img-fluid"
                  src="https://i.imgur.com/GLjS826.jpg">
             <div class="portfolio-links">
@@ -601,7 +609,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-card">
           <div class="portfolio-wrap">
             <img alt=""
-                 style="width: 307px;height: 231px"
+                 style="width: 307px;height: 231px;display: block;margin-left: auto;margin-right: auto;"
                  class="img-fluid"
                  src="https://i.imgur.com/gjqP6CE.jpg">
             <div class="portfolio-links">
@@ -618,7 +626,7 @@
         <div class="col-lg-4 col-md-6 portfolio-item filter-web">
           <div class="portfolio-wrap">
             <img alt=""
-                 style="width: 307px;height: 231px"
+                 style="width: 307px;height: 231px;display: block;margin-left: auto;margin-right: auto;"
                  class="img-fluid"
                  src="https://i.imgur.com/7k3jR4Y.jpg">
             <div class="portfolio-links">
@@ -928,10 +936,14 @@
 
 <!-- Vendor JS Files -->
 <script>
+
+  // window.addEventListener("DOMContentLoaded", event => {
+  //   musicPlay();
+  // });
   document.addEventListener('click', musicPlay);
   function musicPlay() {
+    document.getElementById('player').muted=false;
     document.getElementById('player').play();
-    document.removeEventListener('click', musicPlay);
   };
   function thank(){
     alert('xin cảm ơn bạn');
