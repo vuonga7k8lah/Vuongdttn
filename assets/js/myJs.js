@@ -1,6 +1,6 @@
 const textConfig = {
   text1: "He luu cậu!",
-  text2: "Chào Mừng Cậu Đến Với Thế Giới Của Tớ ^^",
+  text2: "Welcome, Ladies And Gentlemen To My The World  ^^",
   text3: "Cậu yêu tớ có phải không nào ._.",
   text4: "Nếu cậu ko trả lời mà thoát ra tức là muốn làm vợ tớ rùi đó nha :v",
   text5: "Cậu mơ à???",
